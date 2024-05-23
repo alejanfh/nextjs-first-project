@@ -11,7 +11,7 @@ Este proyecto incluye tanto componentes del cliente como del servidor de Next.js
 - **Next.js Client**: Componentes del cliente que manejan la interfaz de usuario.
 - **Next.js Server**: Componentes del servidor que manejan las acciones del servidor y los controladores de rutas.
 
-![Next.js Architecture](./image.png)
+![Next.js Architecture](./public/image.png)
 
 ## Requisitos
 
