@@ -1,5 +1,7 @@
+"use client";
 import { createPost } from "@/actions/actions";
 import React from "react";
+import { useFormState } from "react-dom";
 
 export default function Form() {
   // useFormStatus for pending state
@@ -7,9 +9,11 @@ export default function Form() {
   // useOptimistic for optimisticUI
   // useActionState for pending and error state (no stable)
 
+  const [postError, dispatchPost] = useFormState(createPost, undefined);
+
   return (
     <form
-      action={createPost}
+      action={dispatchPost}
       className="flex flex-col max-w-[400px] mx-auto gap-2 my-10"
     >
       <input
@@ -29,6 +33,10 @@ export default function Form() {
       <button className="h-10 bg-blue-500 px-5 rounded text-white">
         Submit
       </button>
+
+      {postError && (
+        <p className="text-red-500 text-sm mt-2">{postError.message}</p>
+      )}
     </form>
   );
 }
