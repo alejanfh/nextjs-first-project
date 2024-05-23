@@ -41,3 +41,26 @@ Para iniciar el servidor de desarrollo:
 ```bash
 npm run dev
 ```
+
+## Si tienes carpeta y no github
+
+### Actualiza la URL del repositorio remoto
+
+git remote set-url origin https://github.com/alejanfh/nextjs-first-project.git
+
+### O elimina y añade el remoto nuevamente
+
+git remote remove origin
+git remote add origin https://github.com/alejanfh/nextjs-first-project.git
+
+### Verifica la URL del remoto (opcional)
+
+git remote -v
+
+### Renombra la rama principal a "main" (si aún no lo has hecho)
+
+git branch -M main
+
+### Empuja los cambios al repositorio remoto
+
+git push -u origin main
